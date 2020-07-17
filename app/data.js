@@ -32,6 +32,10 @@ const getRandomTimeTableRow = () => {
   return { departure, destination, departureTime, destinationTime, gateWay };
 };
 
-export const getData = () => {
-  return arrayFromOneToN(100).map(getRandomTimeTableRow);
+const DATA = arrayFromOneToN(100).map(getRandomTimeTableRow);
+export const getData = ({ offset, count }) => {
+  console.log("getData", { offset, count });
+  return DATA.slice(offset, offset + count);
 };
+
+export const getDataCount = () => DATA.length;

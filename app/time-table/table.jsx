@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "semantic-ui-react";
-import { getData } from "data";
 import { TableHeader } from "./table-header";
 import { TableBody } from "./table-body";
 import { TableFooter } from "./table-footer";
 import { MAX_FLIGHTS_PER_PAGE } from "./constants";
 
-export const TimeTable = () => {
-  const data = getData();
-  const maxPage = Math.ceil(data.length / MAX_FLIGHTS_PER_PAGE);
-
+export const TimeTable = ({ getData, getDataCount }) => {
   const [page, setPage] = useState(0);
-  const [flights, setFlights] = useState(data.splice(MAX_FLIGHTS_PER_PAGE));
+  const [flights, setFlights] = useState([]);
+  const [maxPage, setMaxPage] = useState(0);
 
   useEffect(() => {
-    setFlights(
-      data.splice(
-        page * MAX_FLIGHTS_PER_PAGE,
-        (page + 1) * MAX_FLIGHTS_PER_PAGE
-      )
-    );
+    setFlights(getData({ offset: 0, count: MAX_FLIGHTS_PER_PAGE }));
+    setMaxPage(Math.ceil(getDataCount / MAX_FLIGHTS_PER_PAGE - 1));
+  }, []);
+
+  useEffect(() => {
+    const offset = page * MAX_FLIGHTS_PER_PAGE;
+    setFlights(getData({ offset, count: MAX_FLIGHTS_PER_PAGE }));
   }, [page]);
 
   const incrementPage = () => setPage(page + 1);
@@ -28,7 +26,7 @@ export const TimeTable = () => {
   return (
     <Table celled>
       <TableHeader />
-      <TableBody data={data} />
+      <TableBody data={flights} />
       <TableFooter
         page={page}
         maxPage={maxPage}

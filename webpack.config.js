@@ -1,5 +1,6 @@
 module.exports = {
   entry: "./app/index.jsx",
+  devtool: "#sourcemap",
   mode: "development",
   module: {
     rules: [
