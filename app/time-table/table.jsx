@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Segment, Table } from "semantic-ui-react";
+import { Segment, Table, Dimmer, Loader } from "semantic-ui-react";
 import { TableHeader } from "./table-header";
 import { TableBody } from "./table-body";
 import { TableFooter } from "./table-footer";
@@ -39,6 +39,9 @@ export const TimeTable = ({ getData, getDataCount }) => {
 
   return (
     <Segment>
+      <Dimmer active={!flights} inverted>
+        <Loader inverted content="Loading" />
+      </Dimmer>
       <Table celled>
         <TableHeader />
         <TableBody data={flights} />
