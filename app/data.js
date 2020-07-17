@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { randomInteger } from "./utils";
+import { randomInteger, arrayFromOneToN } from "./utils";
 import { AIRPORTS, GATEWAYS, CURRENT_DATE } from "./constants";
 
 const getRandomAirport = () => AIRPORTS[randomInteger(0, AIRPORTS.length - 1)];
@@ -11,7 +11,7 @@ const airportsWithSameCity = badCity =>
 const randAirportExcept = badAirports => {
   const badIds = badAirports.map(({ id }) => id);
   const okAirports = AIRPORTS.filter(({ id }) => badIds.includes(id));
-  return okAirports[randomInteger(0, okAirports.length - 1)]
+  return okAirports[randomInteger(0, okAirports.length - 1)];
 };
 
 const randAirportNotInCity = city => {
@@ -33,5 +33,5 @@ const getRandomTimeTableRow = () => {
 };
 
 export const getData = () => {
-  return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(getRandomTimeTableRow);
+  return arrayFromOneToN(100).map(getRandomTimeTableRow);
 };

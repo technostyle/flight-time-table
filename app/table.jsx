@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Icon, Label, Menu, Table } from "semantic-ui-react";
 import { getData } from "./data";
 
@@ -29,8 +29,25 @@ const FlightRow = ({
 );
 
 export const TimeTable = () => {
+  const MAX_FLIGHTS_PER_PAGE = 6;
   const data = getData();
-  console.log({ data });
+  const maxPage = Math.ceil(data.length / MAX_FLIGHTS_PER_PAGE);
+
+  const [page, setPage] = useState(0);
+  const [flights, setFlights] = useState(data.splice(MAX_FLIGHTS_PER_PAGE));
+
+  useEffect(() => {
+    setFlights(
+      data.splice(
+        page * MAX_FLIGHTS_PER_PAGE,
+        (page + 1) * MAX_FLIGHTS_PER_PAGE
+      )
+    );
+  }, [page]);
+
+  const incrementPage = () => page < maxPage && setPage(page + 1);
+  const decrementPage = () => page > 0 && setPage(page - 1);
+
   return (
     <Table celled>
       <Table.Header>
@@ -57,44 +74,17 @@ export const TimeTable = () => {
             />
           )
         )}
-        {/*<Table.Row>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*</Table.Row>*/}
-        {/*<Table.Row>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*</Table.Row>*/}
-        {/*<Table.Row>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*	<Table.Cell>Cell</Table.Cell>*/}
-        {/*</Table.Row>*/}
       </Table.Body>
 
       <Table.Footer>
         <Table.Row>
           <Table.HeaderCell colSpan="6">
             <Menu floated="right" pagination>
-              <Menu.Item as="a" icon>
+              <Menu.Item as="a" icon onClick={decrementPage}>
                 <Icon name="chevron left" />
               </Menu.Item>
-              <Menu.Item as="a">1</Menu.Item>
-              <Menu.Item as="a">2</Menu.Item>
-              <Menu.Item as="a">3</Menu.Item>
-              <Menu.Item as="a">4</Menu.Item>
-              <Menu.Item as="a" icon>
+              <Menu.Item as="a">{page + 1}</Menu.Item>
+              <Menu.Item as="a" icon onClick={incrementPage}>
                 <Icon name="chevron right" />
               </Menu.Item>
             </Menu>

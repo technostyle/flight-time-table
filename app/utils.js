@@ -3,3 +3,5 @@ export const randomInteger = (min, max) => {
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 };
+
+export const arrayFromOneToN = N => Array.from(Array(N).keys());
