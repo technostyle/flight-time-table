@@ -7,17 +7,7 @@ import { getData, getDataCount } from "./data";
 
 export const App = () => (
   <Container>
-    {/*<Segment>*/}
-    {/*  <Header as="h2" textAlign="center">*/}
-    {/*    Flights timetable*/}
-    {/*  </Header>*/}
-    {/*</Segment>*/}
-    {/*<Segment>*/}
-    {/*  <Clock />*/}
-    {/*</Segment>*/}
     <Clock />
-    <Segment>
-      <TimeTable getData={getData} getDataCount={getDataCount()} />
-    </Segment>
+    <TimeTable getData={getData} getDataCount={getDataCount()} />
   </Container>
 );

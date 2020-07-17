@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "semantic-ui-react";
+import { Container, Segment, Table } from "semantic-ui-react";
 import { TableHeader } from "./table-header";
 import { TableBody } from "./table-body";
 import { TableFooter } from "./table-footer";
@@ -24,15 +24,17 @@ export const TimeTable = ({ getData, getDataCount }) => {
   const decrementPage = () => setPage(page - 1);
 
   return (
-    <Table celled>
-      <TableHeader />
-      <TableBody data={flights} />
-      <TableFooter
-        page={page}
-        maxPage={maxPage}
-        decrementPage={decrementPage}
-        incrementPage={incrementPage}
-      />
-    </Table>
+    <Segment>
+      <Table celled>
+        <TableHeader />
+        <TableBody data={flights} />
+        <TableFooter
+          page={page}
+          maxPage={maxPage}
+          decrementPage={decrementPage}
+          incrementPage={incrementPage}
+        />
+      </Table>
+    </Segment>
   );
 };
