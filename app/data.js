@@ -32,10 +32,17 @@ const getRandomTimeTableRow = () => {
   return { departure, destination, departureTime, destinationTime, gateWay };
 };
 
+const delay = time => new Promise(resolve => setTimeout(resolve, time));
+
 const DATA = arrayFromOneToN(100).map(getRandomTimeTableRow);
-export const getData = ({ offset, count }) => {
+export const getData = async ({ offset, count }) => {
   console.log("getData", { offset, count });
+  await delay(1000);
   return DATA.slice(offset, offset + count);
 };
 
-export const getDataCount = () => DATA.length;
+export const getDataCount = async () => {
+  console.log("getDataCount");
+  await delay(1000);
+  return DATA.length;
+};

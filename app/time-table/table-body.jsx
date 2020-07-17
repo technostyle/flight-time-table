@@ -4,7 +4,7 @@ import { FlightRow } from "./table-row";
 
 export const TableBody = ({ data }) => (
   <Table.Body>
-    {data.map(
+    {(Array.isArray(data) ? data : []).map(
       (
         { departure, destination, departureTime, destinationTime, gateWay },
         idx

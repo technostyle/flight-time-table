@@ -8,6 +8,6 @@ import { getData, getDataCount } from "./data";
 export const App = () => (
   <Container>
     <Clock />
-    <TimeTable getData={getData} getDataCount={getDataCount()} />
+    <TimeTable getData={getData} getDataCount={getDataCount} />
   </Container>
 );
