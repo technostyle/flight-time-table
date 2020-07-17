@@ -6,14 +6,15 @@ import { Clock } from "./clock";
 
 export const App = () => (
   <Container>
-    <Segment>
-      <Header as="h2" textAlign="center">
-        Flights timetable
-      </Header>
-    </Segment>
-    <Segment>
-      <Clock />
-    </Segment>
+    {/*<Segment>*/}
+    {/*  <Header as="h2" textAlign="center">*/}
+    {/*    Flights timetable*/}
+    {/*  </Header>*/}
+    {/*</Segment>*/}
+    {/*<Segment>*/}
+    {/*  <Clock />*/}
+    {/*</Segment>*/}
+    <Clock />
     <Segment>
       <TimeTable />
     </Segment>

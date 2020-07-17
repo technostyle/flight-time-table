@@ -29,7 +29,7 @@ const FlightRow = ({
 );
 
 export const TimeTable = () => {
-  const MAX_FLIGHTS_PER_PAGE = 6;
+  const MAX_FLIGHTS_PER_PAGE = 5;
   const data = getData();
   const maxPage = Math.ceil(data.length / MAX_FLIGHTS_PER_PAGE);
 
@@ -45,8 +45,8 @@ export const TimeTable = () => {
     );
   }, [page]);
 
-  const incrementPage = () => page < maxPage && setPage(page + 1);
-  const decrementPage = () => page > 0 && setPage(page - 1);
+  const incrementPage = () => setPage(page + 1);
+  const decrementPage = () => setPage(page - 1);
 
   return (
     <Table celled>
@@ -80,11 +80,21 @@ export const TimeTable = () => {
         <Table.Row>
           <Table.HeaderCell colSpan="6">
             <Menu floated="right" pagination>
-              <Menu.Item as="a" icon onClick={decrementPage}>
+              <Menu.Item
+                as="a"
+                icon
+                onClick={decrementPage}
+                disabled={page === 0}
+              >
                 <Icon name="chevron left" />
               </Menu.Item>
               <Menu.Item as="a">{page + 1}</Menu.Item>
-              <Menu.Item as="a" icon onClick={incrementPage}>
+              <Menu.Item
+                as="a"
+                icon
+                onClick={incrementPage}
+                disabled={page === maxPage}
+              >
                 <Icon name="chevron right" />
               </Menu.Item>
             </Menu>

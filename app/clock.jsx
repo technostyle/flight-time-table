@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Segment } from "semantic-ui-react";
+import { Header, Segment, Divider } from "semantic-ui-react";
 
 const dateOptions = {
   weekday: "long",
@@ -19,8 +19,14 @@ export const Clock = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <Header as="h3" textAlign="center">
-      {time}
-    </Header>
+    <Segment>
+      <Header as="h2" textAlign="center">
+        Flights timetable
+      </Header>
+      <Divider />
+      <Header as="h3" textAlign="center">
+        {time}
+      </Header>
+    </Segment>
   );
 };
