@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82b47cb9-7403-40a7-802c-225c5eae7d96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/time-table/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time-table/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time-table/table-body.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time-table/table-footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time-table/table-header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time-table/table-row.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/clock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/clock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/time-table/table.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="410">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -31,8 +35,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="410">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/time-table/table.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/time-table/table-footer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/time-table/table-body.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/time-table/constants.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="38" selection-start-column="38" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/time-table/table-row.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -41,31 +99,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.jsx">
+        <entry file="file://$PROJECT_DIR$/app/time-table/table-header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/table.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/utils.js">
+        <entry file="file://$PROJECT_DIR$/app/time-table/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -73,23 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/clock.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -117,10 +151,17 @@
         <option value="$PROJECT_DIR$/app/utils.js" />
         <option value="$PROJECT_DIR$/app/data.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/app.jsx" />
         <option value="$PROJECT_DIR$/app/clock.jsx" />
         <option value="$PROJECT_DIR$/app/table.jsx" />
         <option value="$PROJECT_DIR$/app/constants.js" />
+        <option value="$PROJECT_DIR$/app/time-table/index.js" />
+        <option value="$PROJECT_DIR$/app/app.jsx" />
+        <option value="$PROJECT_DIR$/app/time-table/table-header.jsx" />
+        <option value="$PROJECT_DIR$/app/time-table/table-row.jsx" />
+        <option value="$PROJECT_DIR$/app/time-table/constants.js" />
+        <option value="$PROJECT_DIR$/app/time-table/table-body.jsx" />
+        <option value="$PROJECT_DIR$/app/time-table/table-footer.jsx" />
+        <option value="$PROJECT_DIR$/app/time-table/table.jsx" />
       </list>
     </option>
   </component>
@@ -150,6 +191,12 @@
             <path>
               <item name="flight-timetable" type="b2602c69:ProjectViewProjectNode" />
               <item name="flight-timetable" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="time-table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flight-timetable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flight-timetable" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -170,6 +217,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dm.perlov\jet\extra\flight-timetable\app\time-table" />
       <recent name="C:\Users\dm.perlov\jet\extra\flight-timetable\dist" />
       <recent name="C:\Users\dm.perlov\jet\extra\flight-timetable" />
     </key>
@@ -201,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11023000" />
+    <option name="totallyTimeSpent" value="11504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -290,16 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/clock.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -310,20 +348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/table.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="410">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -332,8 +360,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="410">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/table-header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/table-row.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/table-body.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/table-footer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/time-table/table.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
